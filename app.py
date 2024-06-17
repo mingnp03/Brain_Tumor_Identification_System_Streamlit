@@ -62,6 +62,10 @@ if img_path is not None:
     image = Image.open(uploaded_file)
     with st.columns(3)[1]:
      st.image(image.resize((224, 224)), use_column_width=True)
+
+    predicted_class, confidence = predict_image_class(image)
+    confidence_percentage = confidence * 100
+    
     
 
 st.markdown(f"<h4 style='text-align: center; font-size: 20px;'>The predicted class of brain tumor in the image is {predicted_class} with confidence of {confidence_percentage:.2f}%</h4>", unsafe_allow_html=True)
