@@ -1,0 +1,7 @@
+gdown
+matplotlib
+tensorflow
+opencv-python
+gradio
+numpy
+streamlit
