@@ -13,7 +13,7 @@ output = 'efficientnetv2-s-BTI44-96.91.h5'
 gdown.download(url, output, quiet=False)
 
 st.set_page_config(page_title="Brain Tumor Identification System", layout="wide")
-st.title("Aquarium fish species classification")
+st.title("Brain Tumor Identification System")
 st.markdown(f"<h4 style='color: #C0C0C0; font-size: 15px;'>Deployment of an image classification model of Brain Tumor types with 44 classes</h4>", unsafe_allow_html=True)
 
 
