@@ -49,7 +49,8 @@ def predict_image_class(img_path):
     preds = model.predict(img_array)
     class_idx = np.argmax(preds)
     confidence = preds[0][class_idx]
-    return class_labels[class_idx], confidence
+    predicted_class = class_labels[class_idx]
+    return predicted_class, confidence
 
 def predict_and_display(image):
     predicted_class, confidence = predict_image_class(image)
