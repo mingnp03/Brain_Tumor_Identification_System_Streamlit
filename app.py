@@ -56,9 +56,9 @@ def predict_and_display(image):
     confidence_percentage = confidence * 100  # Convert to percentage
     return predicted_class, f"{confidence_percentage:.2f}%"
 
-img_path = st.file_uploader("or upload your image here", type="jpg")
+img_path = st.file_uploader("or upload your image here", type="jpg, png")
 
-if uploaded_file is not None:
+if img_path is not None:
     image = Image.open(uploaded_file)
     with st.columns(3)[1]:
      st.image(image.resize((224, 224)), use_column_width=True)
